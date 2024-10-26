@@ -4,34 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     {% block title %}
-
     {% endblock %}
 </head>
-<body>
-    <div class="container-fluid">
+<body class="d-flex flex-column min-vh-100">
+    <div class="container-fluid flex-grow-1">
         <div class="row">
             <aside class="col-md-3 bg-light p-3">
                 <div class="text-center mb-3">
-                    <img src="{% static 'main/img/img.jpg' %}" alt="Вставьте изображение" class="img-fluid rounded mb-2" width="150">
-                    <h5>Название сайта</h5>
+                    <img src="{% static 'main/img/flask.jpg' %}" alt="Вставьте изображение" class="img-fluid rounded mb-2" width="250">
                 </div>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link active" href="{% url 'home' %}">Главная</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'page2' %}">Вторая</a>
+                        <a class="nav-link" href="{% url 'page2' %}">HTML</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'page3' %}">Третья</a>
+                        <a class="nav-link" href="{% url 'page3' %}">CSS</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'page4' %}">Четвертая</a>
+                        <a class="nav-link" href="{% url 'page4' %}">Bootstrap</a>
                     </li>
                 </ul>
             </aside>
@@ -44,6 +41,39 @@
             </main>
         </div>
     </div>
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>О нас</h5>
+                    <p>Мы всегда рады помочь и ответить на ваши вопросы.
+                        Не стесняйтесь обращаться к нашей службе поддержки.
+                    Спасибо, что выбрали нас, и удачи в обучении!</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Подробнее</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="https://habr.com/ru/articles/783574/" class="text-white">Flask</a></li>
+                        <li><a href="https://doka.guide/html/" class="text-white">HTML</a></li>
+                        <li><a href="https://doka.guide/css/" class="text-white">CSS</a></li>
+                        <li><a href="https://bootstrap-4.ru./" class="text-white">Bootstrap</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Контакты</h5>
+                    <ul class="list-unstyled">
+                        <li>Email: info@example.com</li>
+                        <li>Телефон: +123 456 7890</li>
+                        <li>Адрес: ул. Пример, 123, Москва</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bg-secondary text-center py-2">
+            <span>&copy; 2024 Все права защищены</span>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
